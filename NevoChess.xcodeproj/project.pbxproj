@@ -738,7 +738,7 @@
 				GCC_PREFIX_HEADER = NevoChess_Prefix.pch;
 				INFOPLIST_FILE = "NevoChess-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.playxiangqi.nevochess;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twokingstudio.revochess.100;
 				PRODUCT_NAME = NevoChess;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -757,7 +757,7 @@
 				GCC_PREFIX_HEADER = NevoChess_Prefix.pch;
 				INFOPLIST_FILE = "NevoChess-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.playxiangqi.nevochess;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twokingstudio.revochess.100;
 				PRODUCT_NAME = NevoChess;
 				SDKROOT = iphoneos;
 			};
@@ -804,7 +804,7 @@
 				GCC_PREFIX_HEADER = NevoChess_Prefix.pch;
 				INFOPLIST_FILE = "NevoChess-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.playxiangqi.nevochess;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twokingstudio.revochess.100;
 				PRODUCT_NAME = NevoChess;
 				SDKROOT = iphoneos;
 			};
@@ -851,7 +851,7 @@
 				GCC_PREFIX_HEADER = NevoChess_Prefix.pch;
 				INFOPLIST_FILE = "NevoChess-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.playxiangqi.nevochess;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twokingstudio.revochess.100;
 				PRODUCT_NAME = NevoChess;
 				SDKROOT = iphoneos;
 			};
