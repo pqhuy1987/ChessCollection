@@ -774,7 +774,7 @@ moveSP += 256;   // reserve space for move list
 for(piece = stm + 15; piece >= stm; piece--) { // loop over our pieces
     if((from = pos[piece]) == 0xFF) continue;  // is captured
     dir = firstDirTab[ firstDir[piece]+from ];
-    while(step = steps[dir]) { // loop over directions
+    while((step = steps[dir])) { // loop over directions
         to = from + step;
         do{ // scan along ray (ends after one iteration for leapers)
             
@@ -806,7 +806,7 @@ for(piece = stm + 15; piece >= stm; piece--) { // loop over our pieces
             }
             
             to += step;
-        } while(!(victim-EMPTY | dir<75));     // end if leaper or capt
+        } while(!(victim-EMPTY | (dir<75)));     // end if leaper or capt
         dir++;                                 // try new direction
     }
 }
@@ -838,10 +838,10 @@ if(depth<=0) {
 }
 
 // ITERATIVE DEEPENING LOOP
-for(iterDep = depth>=1000?1:hashMove?depth:PV?2-(depth&1):depth>2?1:depth; iterDep <= depth; iterDep+=2-(depth>=1000|!PV)) {
+for(iterDep = depth>=1000?1:hashMove?depth:PV?2-(depth&1):depth>2?1:depth; iterDep <= depth; iterDep+=2-((depth>=1000)|!PV)) {
     bestScore = startScore;
     alpha = origAlpha;
-    firstMove = depth>=1000|lastPly?2:0;
+    firstMove = (depth>=1000)|lastPly?2:0;
     
     // LOOP OVER MOVES
     for(curMove=capts; curMove<lastMove; curMove++) {

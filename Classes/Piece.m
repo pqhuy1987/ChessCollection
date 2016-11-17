@@ -180,8 +180,8 @@
         height = scale;
     }
     else {
-        width = CGImageGetWidth(image);
-        height = CGImageGetHeight(image);
+        width = (int)CGImageGetWidth(image);
+        height = (int)CGImageGetHeight(image);
         if( scale > 0 ) {
             width = ceil( width * scale );
             height= ceil( height* scale );

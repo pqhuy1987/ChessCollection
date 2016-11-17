@@ -171,7 +171,7 @@ CGImageRef CreateCGImageFromFile( NSString *path )
     if( provider ) {
         image = CGImageCreateWithPNGDataProvider(provider, NULL, NO, kCGRenderingIntentDefault);
         if(!image) { 
-            NSLog(@"INFO: Cannot load image as PNG file %@ (ptr size=%u)",path,sizeof(void*));
+            NSLog(@"INFO: Cannot load image as PNG file %@ (ptr size=%lu)",path,sizeof(void*));
             //fall back to JPEG 
             image = CGImageCreateWithJPEGDataProvider(provider, NULL, NO, kCGRenderingIntentDefault);
         }
@@ -296,8 +296,8 @@ static void releasePatternImage( void *info )
 CGPatternRef CreateImagePattern( CGImageRef image )
 {
     NSCParameterAssert(image);
-    int width = CGImageGetWidth(image);
-    int height = CGImageGetHeight(image);
+    int width = (int)CGImageGetWidth(image);
+    int height = (int)CGImageGetHeight(image);
     static const CGPatternCallbacks callbacks = {0, &drawPatternImage, &releasePatternImage};
     return CGPatternCreate (image,
                             CGRectMake (0, 0, width, height),

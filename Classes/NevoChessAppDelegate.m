@@ -28,7 +28,7 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {
-    int settingsVersion = [[NSUserDefaults standardUserDefaults] integerForKey:@"settings_version"];
+    int settingsVersion = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"settings_version"];
     if (settingsVersion == 0) // Not set?
     {
         // This is the first time this App runs.
@@ -47,6 +47,17 @@
 
     //[window addSubview:[navigationController view]];
     [window setRootViewController:navigationController];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
+    imageView.image = [UIImage imageNamed:@"bottomimg.png"];
+    [window insertSubview:imageView atIndex:0];
+    UILabel *lbl1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 568 - 70, 320, 60)];
+    lbl1.textColor = [UIColor blackColor];
+    lbl1.backgroundColor=[UIColor clearColor];
+    lbl1.textColor=[UIColor orangeColor];
+    lbl1.textAlignment = NSTextAlignmentCenter;
+    lbl1.userInteractionEnabled=NO;
+    lbl1.text= @"© TWOKING STUDIO";
+    [window addSubview:lbl1];
     navigationController.navigationBarHidden = YES;
     [window makeKeyAndVisible];
 }

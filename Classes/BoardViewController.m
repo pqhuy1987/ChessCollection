@@ -460,9 +460,9 @@ enum InfoLabelTag
 - (void) _setReplayMode:(BOOL)on
 {
     if (on) {
-        _game_over_msg.text = [NSString stringWithFormat:@"%@ %d/%d",
+        _game_over_msg.text = [NSString stringWithFormat:@"%@ %d/%lu",
                                NSLocalizedString(@"Replay", @""),
-                               _nthMove+1, [_moves count]];
+                               _nthMove+1, (unsigned long)[_moves count]];
         if (_game_over_msg.tag != INFO_LABEL_TAG_REPLAY) {
             _game_over_msg.hidden = NO;
             _game_over_msg.alpha = 0.5;

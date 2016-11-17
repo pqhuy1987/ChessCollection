@@ -1223,7 +1223,7 @@ ret:
     memset(nHistoryTable, 0, 65536 * sizeof(int)); // clear history table
     memset(mvKillers, 0, LIMIT_DEPTH * 2 * sizeof(int)); // clear killer move table
     memset(HashTable, 0, HASH_SIZE * sizeof(HashItem));  // clear TT
-    t = clock();       // initialize timer
+    t = (int)clock();       // initialize timer
     n_distance = 0; // initialize steps
     
     // search opening book

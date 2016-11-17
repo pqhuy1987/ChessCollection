@@ -95,7 +95,7 @@ enum ActionSheetEnum
                        initWithBarButtonSystemItem:UIBarButtonSystemItemPlay
                        target:self action:_suspendAIButton.action];
 
-    _myColor == NC_COLOR_RED;
+    _myColor = NC_COLOR_RED;
     [_board setRedLabel:NSLocalizedString(@"You", @"")];
 
     _aiSuspended = [[NSUserDefaults standardUserDefaults] boolForKey:@"ai_suspended"];

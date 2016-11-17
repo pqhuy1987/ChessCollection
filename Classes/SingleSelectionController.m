@@ -113,7 +113,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {    
-    NSString* cellId = [NSString stringWithFormat:@"%d", indexPath.row];
+    NSString* cellId = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId] autorelease];
