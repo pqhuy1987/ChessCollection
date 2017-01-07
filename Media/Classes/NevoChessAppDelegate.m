@@ -56,7 +56,7 @@
     lbl1.textColor=[UIColor orangeColor];
     lbl1.textAlignment = NSTextAlignmentCenter;
     lbl1.userInteractionEnabled=NO;
-    lbl1.text= @"© TWOKING STUDIO";
+    lbl1.text= @"© TWOKING MEDIA";
     [window addSubview:lbl1];
     navigationController.navigationBarHidden = YES;
     [window makeKeyAndVisible];

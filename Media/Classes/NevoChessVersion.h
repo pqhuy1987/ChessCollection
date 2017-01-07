@@ -1,4 +1,4 @@
 #ifndef NEVOCHESS_VERSION
-#define NEVOCHESS_BUILD_INFO "201611172341.10ICTrUnversioned directory"
+#define NEVOCHESS_BUILD_INFO "201701071139.08ICTrUnversioned directory"
 #endif
 
